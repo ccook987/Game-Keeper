@@ -1,44 +1,117 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Capstone Project**
 
-## Available Scripts
+#### _An online portal to organize your board game collection, 11.30.2018_
 
-In the project directory, you can run:
+###### By Colin Cook
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This application is a cataloging website that allows users to search through a database of board games and add them to their online collection. Users can sort their collection by certain criteria, designate games as favorites and add reviews and comments to those games.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Specifications
 
-### `npm run build`
+_Target Users:_
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Board game owner wanting to organize their collection
+* Board game player looking for new games to play
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+_User Stories:_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* As a board game owner, I want to be able to search the database to find games that I currently own.
+* As a board game owner, I want to be able to add games to my online collection.
+* As a board game owner, I want to be able to organize the games that I have added to my collection.
+* As a board game owner, I want to be able to add reviews for the games in my collection.
+* As a board game owner, I want to be able to designate certain games as 'favorites'.
+* As a board game owner, I want to be able to designate which game I am currently playing.
 
-### `npm run eject`
+* As a board game player, I want to be able to easily search for new games to play.
+* As a board game player, I want to be able to filter my searches by certain criteria to match the type of game I am looking for.
+* As a board game player, I want to be able to see photos, details and reviews of each game in my search results.
+* As a board game player, I want to be able to add games from my search results to my wish list.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Images
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Initial Sketches
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+_Low Fidelity Draft of Profile Page_
+![Profile Sketch](src/assets/images/profile-page-drawing.jpg)
 
-## Learn More
+_Component Tree_
+![Component Tree Draft](src/assets/images/component-tree-draft.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Wireframes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_High Fidelity Draft of Profile Page_
+![Profile Wireframe](src/assets/images/profile-page-sketch.png)
+
+## Project Proposal
+
+Name of Student: Colin Cook
+
+Name of Project: Board Game Organizer
+
+Project’s Purpose or Goal:
+
+This application will serve as a hub for lovers of board games to be able to compile and view all of their favorite games in one place. This program will allow users to search through a database of board games and add specific ones to their list. A user can then organize their personal game collection for others to see. Additionally, they will be able to add personal stats, comments and reviews to each game in their collection.
+
+List the absolute minimum features the project requires to meet this purpose or goal:
+
+* A user will be able to enter search terms to return a list of board games that match their criteria.
+
+* A user will be able to add a game from the search results to their personal collection.
+
+* A user will be able to add comments and reviews to each of the games in their collection.
+
+* A user will be able to organize their game collection to denote favorites, recently played and currently playing.
+
+What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
+
+* BoardGameGeek API
+* React
+* Redux
+* Firebase
+
+If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
+
+* Multiple profiles with user authentication
+* Social media interactions such as adding friends and messaging capabilities
+
+
+
+## Setup/Installation Requirements
+
+* Clone repository from [GitHub](https://github.com/ccook987/capstone-project.git) to your computer
+* In Terminal, navigate to program directory
+* Type ``npm install`` to install dependencies
+* Type ``npm run start`` to view the application in the browser
+
+
+## Technologies Used
+
+* NPM
+* HTML5
+* CSS
+* React
+* Redux
+* Webpack
+* Babel
+* ESlint
+* Sketch
+* Firebase
+* BoardGameGeek API
+
+## Support and contact details
+
+I would love to hear from you! If you have any issues with this application or have any suggestions on how it could be improved, please let me know.
+
+Contact me at [ccook987@gmail.com](mailto:ccook987@gmail.com)
+
+
+### License
+
+This software is licensed under the MIT license.
+
+Copyright (c) 2018 Colin Cook
