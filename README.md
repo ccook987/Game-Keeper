@@ -1,8 +1,12 @@
-# **Capstone Project**
+# **Capstone Project Static Site**
 
 #### _An online portal to organize your board game collection, 11.30.2018_
 
 ###### By Colin Cook
+
+
+###  _Please visit the following link to view the planning repository for this site_ 
+[Capstone Project Planning Repository](https://github.com/ccook987/capstone-project.git)
 
 
 ## Description
