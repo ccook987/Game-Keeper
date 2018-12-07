@@ -1,5 +1,5 @@
 import React from 'react';
-import '../sass/App.scss';
+import '../sass/main.scss';
 import Header from './Header';
 import Home from './Home';
 import Error404 from './Error404';
@@ -11,7 +11,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-      <p> i am the app component</p>
         <Header/>
         <Switch>
           <Route exact path='/' component={Home}/>
