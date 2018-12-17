@@ -35,11 +35,25 @@ export function fetchGameTitle(title) {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(json => {
+      let bggGameId = json.items[0].objectid;
+      console.log(bggGameId);
       console.log('Api results:', json)
       dispatch(fetchGamesSuccess(json));
+      fetchGameDetails(bggGameId, dispatch);
       console.log(json);
       return json
     })
     .catch(error => dispatch(fetchGamesFailure(error)));
   };
 }
+
+export function fetchGameDetails(bggGameId, dispatch) {
+  return fetch('https://api.geekdo.com/api/geekitems?objectid=' + bggGameId + '&showcount=10&nosession=1&ajax=1&objecttype=thing').then(
+    response => response.json(),
+    error => console.log('An error occurred.', error)
+  ).then(json => {
+    console.log(json);
+    return json
+  })
+  .catch(error => dispatch(fetchGamesFailure(error)));
+};
