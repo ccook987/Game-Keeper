@@ -9,19 +9,37 @@ import { createStore, applyMiddleware } from 'redux';
 import middlewareLogger from './middleware/middleware-logger';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
+import fetchGameResultsReducer from './reducers/fetchGameResultsReducer';
 
-const render = (Component) => {
-  ReactDOM.render(
-    <AppContainer>
-      <HashRouter>
-        <Component/>
-      </HashRouter>
-    </AppContainer>,
-    document.getElementById('root')
-  );
-};
 
-render(App);
+
+
+const store = createStore(fetchGameResultsReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
+
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+);
+
+ReactDOM.render(
+  <HashRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </HashRouter>,
+  document.getElementById('root'));
+
+// const render = (Component) => {
+//   ReactDOM.render(
+//     <AppContainer>
+//       <HashRouter>
+//         <Component/>
+//       </HashRouter>
+//     </AppContainer>,
+//     document.getElementById('root')
+//   );
+// };
+// 
+// render(App);
 
 /*eslint-disable */
 if (module.hot) {
