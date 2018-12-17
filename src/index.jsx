@@ -10,11 +10,13 @@ import middlewareLogger from './middleware/middleware-logger';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 import fetchGameResultsReducer from './reducers/fetchGameResultsReducer';
+import rootReducer from './reducers';
 
 
 
 
-const store = createStore(fetchGameResultsReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
+
+const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
 
 let unsubscribe = store.subscribe(() =>
   console.log(store.getState())

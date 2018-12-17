@@ -18,6 +18,12 @@ export const fetchGamesFailure = error => ({
   payload: { error }
 });
 
+export const selectGame = name =>
+({
+  type: types.SELECT_GAME,
+  name
+});
+
 
 export function fetchGameTitle(title) {
   return dispatch => {
