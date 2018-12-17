@@ -5,6 +5,10 @@ import { HashRouter } from 'react-router-dom';
 import './sass/main.scss';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import { createStore, applyMiddleware } from 'redux';
+import middlewareLogger from './middleware/middleware-logger';
+import { Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
 
 const render = (Component) => {
   ReactDOM.render(
