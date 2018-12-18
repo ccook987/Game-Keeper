@@ -36,13 +36,16 @@ class GameList extends React.Component {
     if (loading) {
       return <div>Loading...</div>;
     }
-      return (
-        <ul>
-          {gameArray.gameArray.map(game =>
-             <li onClick={() => {this.handleAddingGame(game.name)}} key={game.id}>{game.name}</li>
-          )}
-          </ul>
-      );
+    if(!loading) {
+    return (
+      <select onChange={this.handleChange}>
+        {gameArray.gameArray.map(game =>
+          <option onChange={() => {this.handleAddingGame(game.name)}} key={game.id}>{game.name}</option>
+        )}
+      </select>
+    );
+
+  }
     
 
 

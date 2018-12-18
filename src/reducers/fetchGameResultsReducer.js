@@ -18,7 +18,7 @@ const fetchGameResultsReducer = (state = initialState, action) => {
     case types.FETCH_GAMES_SUCCESS:
       return {
         loading: false,
-        gameArray: action.payload.games.items
+        gameArray: action.payload.games.games
       };
 
       // The request failed, but it did stop, so set loading to "false".
