@@ -20,17 +20,13 @@ class GameList extends React.Component {
       type: types.SELECT_GAME,
       gameTitle
     }
-    console.log(action);
     this.props.dispatch(action);
-     console.log(this.state);
    }
 
 
 
   render() {
     const { error, loading, gameArray } = this.props;
-    console.log(typeof(gameArray));
-    console.log(this.props.gameArray);
     if (error) {
       return <div>Error! {error.message}</div>
     }

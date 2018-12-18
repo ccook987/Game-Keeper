@@ -37,7 +37,6 @@ export function fetchGameTitle(title) {
     ).then(json => {
       console.log('Api results:', json)
       dispatch(fetchGamesSuccess(json));
-      console.log(json);
         return json
 
     })
