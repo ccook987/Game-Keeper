@@ -35,25 +35,35 @@ export function fetchGameTitle(title) {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(json => {
-      let bggGameId = json.items[0].objectid;
-      console.log(bggGameId);
+      let allTheGames = Object.keys(json.items).length;
+      let newArray = []
+    for ( let i = 0; i < allTheGames; i++)
+    {
+        console.log("ID: " + json.items[i].objectid)
+        let listOfIds = json.items[i].objectid
+        newArray.push(listOfIds);
+        console.log(newArray);
+      }
       console.log('Api results:', json)
       dispatch(fetchGamesSuccess(json));
-      fetchGameDetails(bggGameId, dispatch);
+      fetchGameDetails(newArray, dispatch);
       console.log(json);
-      return json
+      console.log(newArray);
+
+      return newArray;
     })
     .catch(error => dispatch(fetchGamesFailure(error)));
   };
 }
 
-export function fetchGameDetails(bggGameId, dispatch) {
-  return fetch('https://api.geekdo.com/api/geekitems?objectid=' + bggGameId + '&showcount=10&nosession=1&ajax=1&objecttype=thing').then(
+export function fetchGameDetails(newArray, dispatch) {
+  return fetch('https://api.geekdo.com/api/geekitems?objectid=' + newArray.toString().split(" ").join(',') + '&showcount=10&nosession=1&ajax=1&objecttype=thing').then(
     response => response.json(),
     error => console.log('An error occurred.', error)
   ).then(json => {
     console.log(json);
-    return json
+    console.log(newArray);
+    return json;
   })
   .catch(error => dispatch(fetchGamesFailure(error)));
 };
