@@ -1,6 +1,16 @@
 import v4 from 'uuid/v4';
 import * as types from './../constants/ActionTypes';
+/* eslint-disable */
+// import firebase from 'firebase/app';
 import constants from './../../src/constants';
+import firebaseConfig from '../constants/firebaseConfig';
+require('firebase/database');
+const firebase = require('firebase/app');
+
+firebase.initializeApp(firebaseConfig);
+const gameToAdd = firebase.database().ref('games');
+/* eslint-enable */
+
 
 export const fetchGamesBegin = (title, id) => ({
   type: types.FETCH_GAMES_BEGIN,
@@ -25,8 +35,8 @@ export const selectGame = name =>
 });
 
 
+
 export function addGameToProfileList(selectedGame) {
-  const gameToAdd = firebase.database().ref('gameToAdd');
   return () => gameToAdd.push({
     selectedGame: selectedGame
   });

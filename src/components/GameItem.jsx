@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchSelectedGame, selectGame } from './../actions';
+import { fetchSelectedGame, selectGame, addGameToProfileList } from './../actions';
 import constants from './../constants';
 import * as types from './../constants/ActionTypes';
 
@@ -31,6 +31,12 @@ class GameItem extends React.Component {
     console.log(this.props.dispatch);
     this.props.dispatch(action);
    }
+   
+    handleAddingNewGame(selectedGame, props, event) {
+    const { dispatch } = props;
+    event.preventDefault();
+    dispatch(addGameToProfileList(selectedGame));
+  }
    
 render() {
   const { error, loading, gameArray } = this.props;

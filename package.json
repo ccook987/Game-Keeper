@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^4.12.0",
     "fs-file-sync-fd": "^0.1.0",
     "isomorphic-fetch": "^2.2.1",
     "node-sass": "^4.10.0",
