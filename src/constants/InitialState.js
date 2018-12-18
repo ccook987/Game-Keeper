@@ -6,5 +6,6 @@ export const initialState = {
   selectedGame: {
     gameTitle: null,
     id: null
-  }
+  },
+  profileGameArray: []
 };

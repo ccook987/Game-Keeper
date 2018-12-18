@@ -10,19 +10,18 @@ import GameItem from './GameItem';
 class GameList extends React.Component {
   constructor(props, { state, dispatch }) {
     super(props, { state });
-    this.handleChange = this.handleChange.bind(this);
   }
 
 
-  handleChange(e) {
-    let gameTitle = e.currentTarget.value;
-    console.log(gameTitle);
-    let action = {
-      type: types.SELECT_GAME,
-      gameTitle
-    }
-    this.props.dispatch(action);
-   }
+  // handleChange(e) {
+  //   let gameTitle = e.currentTarget.value;
+  //   console.log(gameTitle);
+  //   let action = {
+  //     type: types.SELECT_GAME,
+  //     gameTitle
+  //   }
+  //   this.props.dispatch(action);
+  //  }
 
 
 
@@ -53,10 +52,6 @@ class GameList extends React.Component {
     );
 
   }
-    
-
-
-
   }
 }
 

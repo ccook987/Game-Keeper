@@ -6,24 +6,25 @@ import constants from './../constants';
 
 
 
-class ProfileGames extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+function ProfileGames(props, state) {
+  
+  // handleChange(e) {
+  //   this.setState({
+  //      [e.target.name]: e.target.value
+  //    });
+  //    console.log(this.state);
+  //  }
 
-  render() {
     return (
       <div>
-      Profile Game List
+      hi
+      <p>{props.selectedGame.selectedGame}</p>
       </div>
     );
   }
-}
 
 const mapStateToProps = state => ({
-  gameArray: state.gameArray,
-  loading: state.loading,
-  error: state.error,
+  state: state,
   selectedGame: state.selectedGame
 });
 

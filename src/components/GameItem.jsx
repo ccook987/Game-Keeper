@@ -9,7 +9,7 @@ import * as types from './../constants/ActionTypes';
 class GameItem extends React.Component {
   constructor(props, { state, dispatch }) {
     super(props, { state });
-    this.handleChange = this.handleChange.bind(this);
+    this.handleSelectGame = this.handleSelectGame.bind(this);
   }
   // function handleSavingSelectedTicket(ticketId){
   //   const { dispatch } = props;
@@ -20,7 +20,7 @@ class GameItem extends React.Component {
   //   dispatch(action);
   // }
 
-  handleChange(gameTitle) {
+  handleSelectGame(gameTitle) {
     // let gameTitle = e.target.value;
     console.log(gameTitle);
     let action = {
@@ -36,7 +36,7 @@ render() {
   const { error, loading, gameArray } = this.props;
 
   const gameInformation =
-    <div onClick={() => {this.handleChange(this.props.name)}}>
+    <div onClick={() => {this.handleSelectGame(this.props.name)}}>
       <h4>{this.props.name}</h4>
       <p>{this.props.minplayers} - {this.props.maxplayers} players </p>
       <p>{this.props.minplaytime} - {this.props.maxplaytime} minutes </p>
