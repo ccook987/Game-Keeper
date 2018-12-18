@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { fetchSelectedGame, selectGame } from './../actions';
 import constants from './../constants';
+import * as types from './../constants/ActionTypes';
 
-function GameItem(props){
 
+class GameItem extends React.Component {
+  constructor(props, { state, dispatch }) {
+    super(props, { state });
+    this.handleChange = this.handleChange.bind(this);
+  }
   // function handleSavingSelectedTicket(ticketId){
   //   const { dispatch } = props;
   //   const action = {
@@ -14,20 +20,42 @@ function GameItem(props){
   //   dispatch(action);
   // }
 
+  handleChange(gameTitle) {
+    // let gameTitle = e.target.value;
+    console.log(gameTitle);
+    let action = {
+      type: types.SELECT_GAME,
+      gameTitle: gameTitle
+    }
+    console.log(action);
+    console.log(this.props.dispatch);
+    this.props.dispatch(action);
+   }
+   
+render() {
+  const { error, loading, gameArray } = this.props;
+
   const gameInformation =
-    <div>
-      <h4>{props.name}</h4>
-      <p>{props.minplayers} - {props.maxplayers} players </p>
-      <p>{props.minplaytime} - {props.maxplaytime} minutes </p>
-      <img src={props.thumburl}/>
-      <p>{props.descriptionpreview}</p>
+    <div onClick={() => {this.handleChange(this.props.name)}}>
+      <h4>{this.props.name}</h4>
+      <p>{this.props.minplayers} - {this.props.maxplayers} players </p>
+      <p>{this.props.minplaytime} - {this.props.maxplaytime} minutes </p>
+      <img src={this.props.thumburl}/>
+      <p>{this.props.descriptionpreview}</p>
     </div>;
     return (
-      <div>
+      <div >
         {gameInformation}
       </div>
     );
-  
+  }
 }
 
-export default connect()(GameItem);
+const mapStateToProps = state => ({
+  gameArray: state.gameArray,
+  loading: state.loading,
+  error: state.error,
+  selectedGame: state.selectedGame
+});
+
+export default connect(mapStateToProps)(GameItem);

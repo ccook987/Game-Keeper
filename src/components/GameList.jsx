@@ -15,7 +15,8 @@ class GameList extends React.Component {
 
 
   handleChange(e) {
-    let gameTitle = e.target.value;
+    let gameTitle = e.currentTarget.value;
+    console.log(gameTitle);
     let action = {
       type: types.SELECT_GAME,
       gameTitle
@@ -35,7 +36,7 @@ class GameList extends React.Component {
     }
     if(!loading) {
     return (
-      <div onClick={this.handleChange}>
+      <div>
         {gameArray.gameArray.map(game => {
           return <GameItem
           key={game.id}

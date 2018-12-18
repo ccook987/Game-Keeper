@@ -4,19 +4,16 @@ const { initialState, types } = constants;
 
 const selectGameFromListReducer = (state = initialState.selectedGame, action) => {
   let selectedGame;
-  let yearPublished;
   let newSelectedGameStateSlice;
   switch (action.type) {
     case types.SELECT_GAME:
       return {
-        selectedGame: action.gameTitle,
-        yearPublished: action.yearPublished
-
+        selectedGame: action.gameTitle
       }
     console.log(selectedGame);
     console.log(action.gameTitle);
     console.log(typeof(selectedGame));
-    newSelectedGameStateSlice = Object.assign({}, state, {"gameTitle" : selectedGame, "yearPublished" : yearPublished});
+    newSelectedGameStateSlice = Object.assign({}, state, {"gameTitle" : selectedGame});
     console.log(newSelectedGameStateSlice);
     return newSelectedGameStateSlice;
   default:

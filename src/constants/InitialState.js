@@ -5,7 +5,6 @@ export const initialState = {
   user: null,
   selectedGame: {
     gameTitle: null,
-    id: null,
-    yearPublished: null
+    id: null
   }
 };

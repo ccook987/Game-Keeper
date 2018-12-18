@@ -18,11 +18,10 @@ export const fetchGamesFailure = error => ({
   payload: { error }
 });
 
-export const selectGame = (name, yearPublished) =>
+export const selectGame = name =>
 ({
   type: types.SELECT_GAME,
-  name,
-  yearPublished
+  name
 });
 
 export function fetchGameTitle(title) {
