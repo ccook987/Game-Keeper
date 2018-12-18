@@ -24,6 +24,14 @@ export const selectGame = name =>
   name
 });
 
+
+export function addGameToProfileList(selectedGame) {
+  const gameToAdd = firebase.database().ref('gameToAdd');
+  return () => gameToAdd.push({
+    selectedGame: selectedGame
+  });
+}
+
 export function fetchGameTitle(title) {
   return dispatch => {
     const localGameId = v4();
