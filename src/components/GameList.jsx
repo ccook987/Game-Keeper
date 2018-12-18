@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchSelectedGame, selectGame } from './../actions';
 import * as types from './../constants/ActionTypes';
 import constants from './../constants';
+import GameItem from './GameItem';
 
 
 
@@ -28,7 +29,7 @@ class GameList extends React.Component {
 
   render() {
     const { error, loading, gameArray } = this.props;
-    console.log(gameArray);
+    console.log(typeof(gameArray));
     console.log(this.props.gameArray);
     if (error) {
       return <div>Error! {error.message}</div>
@@ -38,11 +39,17 @@ class GameList extends React.Component {
     }
     if(!loading) {
     return (
-      <select onChange={this.handleChange}>
-        {gameArray.gameArray.map(game =>
-          <option onChange={() => {this.handleAddingGame(game.name)}} key={game.id}>{game.name}</option>
-        )}
-      </select>
+      <div onClick={this.handleChange}>
+        {gameArray.gameArray.map(game => {
+          return <GameItem
+          key={game.id}
+          min-players={game.min_players}
+          max-players={game.max_players}
+          name={game.name}
+          description={game.description}
+           />
+        })}
+      </div>
     );
 
   }

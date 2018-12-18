@@ -35,7 +35,6 @@ const mapStateToProps = state => {
     title: state.gameById,
     id: state.gameById,
     gameArray: state.gameById
-
   };
 };
 

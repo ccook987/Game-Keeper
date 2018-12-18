@@ -35,19 +35,9 @@ export function fetchGameTitle(title) {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(json => {
-    //   let allTheGames = Object.keys(json.items).length;
-    //   let newArray = []
-    // for ( let i = 0; i < allTheGames; i++)
-    // {
-    //     console.log("ID: " + json.items[i].objectid)
-    //     let listOfIds = json.items[i].objectid
-    //     newArray.push(listOfIds);
-    //     console.log(newArray);
-    //   }
       console.log('Api results:', json)
       dispatch(fetchGamesSuccess(json));
       console.log(json);
-
       return json;
     })
     .catch(error => dispatch(fetchGamesFailure(error)));
