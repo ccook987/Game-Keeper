@@ -38,7 +38,8 @@ export function fetchGameTitle(title) {
       console.log('Api results:', json)
       dispatch(fetchGamesSuccess(json));
       console.log(json);
-      return json;
+        return json
+
     })
     .catch(error => dispatch(fetchGamesFailure(error)));
   };

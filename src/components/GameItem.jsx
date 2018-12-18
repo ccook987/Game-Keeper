@@ -16,10 +16,11 @@ function GameItem(props){
 
   const gameInformation =
     <div>
-      <h3>{props.name}</h3>
-      <h3>{props.players}</h3>
-      <h3>{props.max_players}</h3>
-      <p>{props.description}</p>
+      <h4>{props.name}</h4>
+      <p>{props.minplayers} - {props.maxplayers} players </p>
+      <p>{props.minplaytime} - {props.maxplaytime} minutes </p>
+      <img src={props.thumburl}/>
+      <p>{props.descriptionpreview}</p>
     </div>;
     return (
       <div>

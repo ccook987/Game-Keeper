@@ -3,7 +3,7 @@ import '../sass/main.scss';
 import Header from './Header';
 import GameSearch from './GameSearch';
 import GameList from './GameList';
-
+import ProfileGames from './ProfileGames';
 import Home from './Home';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
@@ -17,6 +17,7 @@ class App extends React.Component {
         <Header/>
         <GameSearch/>
         <GameList/>
+        <ProfileGames/>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route component={Error404} />

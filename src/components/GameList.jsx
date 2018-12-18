@@ -43,10 +43,13 @@ class GameList extends React.Component {
         {gameArray.gameArray.map(game => {
           return <GameItem
           key={game.id}
-          min-players={game.min_players}
-          max-players={game.max_players}
+          minplayers={game.min_players}
+          maxplayers={game.max_players}
+          minplaytime={game.min_playtime}
+          maxplaytime={game.max_playtime}
+          thumburl={game.thumb_url}
           name={game.name}
-          description={game.description}
+          descriptionpreview={game.description_preview}
            />
         })}
       </div>
