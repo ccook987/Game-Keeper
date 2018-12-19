@@ -15,13 +15,14 @@ export const addGame = (game) => ({type: types.ADD_GAME, game})
 export const removeGame = (game) => ({type: types.REMOVE_GAME, game})
 
 export function watchGameAddedEvent(dispatch) {
- firebase.database().ref(`/`).on('child_added', (snap) => {    dispatch(addGame(snap.val()));
+  firebase.database().ref(`/`).on('child_added', (snap) => {
+  dispatch(addGame(snap.val()));
  });
 }
 
 export function watchGameRemovedEvent(dispatch) {
- firebase.database().ref(`/`).on('child_removed', (snap) => {
- dispatch(removeGame(snap.val()));
+  firebase.database().ref(`/`).on('child_removed', (snap) => {
+  dispatch(removeGame(snap.val()));
  });
 }
 

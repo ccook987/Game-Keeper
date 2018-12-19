@@ -19,7 +19,6 @@ class GameItem extends React.Component {
       type: types.SELECT_GAME,
       gameTitle: gameTitle
     }
-    console.log(this.props.dispatch);
     this.props.dispatch(action);
     addGameToFirebase(gameTitle);
   }
