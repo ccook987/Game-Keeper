@@ -4,12 +4,12 @@ import { getGamesThunk, watchGameAddedEvent, watchGameRemovedEvent } from './../
 import * as types from '../constants/actionTypes';
 import constants from './../constants';
 import {addGameToFirebase, removeGameFromFirebase} from '../constants/firebaseConfig';
-import '../sass/_profileGames.scss';
+import '../sass/main.scss';
 
 class ProfileGames extends Component {
   render () {
     return ( 
-      <div>
+      <div className='profilegames-background'>
       <ul>
       {this.props.games.game.map(item => 
         <li key={item.id}>{item.game}<button

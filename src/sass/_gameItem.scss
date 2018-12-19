@@ -1,0 +1,38 @@
+.gameItem-container {
+  background-color: yellow;
+  height: 25em;
+  width: 20em;
+  margin-bottom: 2em;
+  padding: 1em;
+
+}
+
+.gameItem-name {
+padding-bottom: 1em;
+height: 2.5em;
+}
+
+.gameItem-image {
+  height: 150px;
+  width: 150px;
+  padding-bottom: 1em;
+
+}
+
+.gameItem-players {
+  padding-bottom: 1em;
+
+}
+
+.gameItem-playtime {
+  padding-bottom: 1em;
+
+}
+
+.gameItem-description {
+  height: 7em;
+  overflow-y: scroll;
+}
+
+.gameInfo {
+}

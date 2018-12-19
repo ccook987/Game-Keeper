@@ -6,6 +6,8 @@ import constants from './../constants';
 import * as types from '../constants/actionTypes';
 import firebase from 'firebase';
 import { addGameToFirebase, removeGameFromFirebase } from '../constants/firebaseConfig';
+import '../sass/main.scss';
+
 
 class GameItem extends React.Component {
   constructor(props, { state, dispatch }) {
@@ -26,15 +28,15 @@ class GameItem extends React.Component {
   render() {
     const { error, loading, gameArray } = this.props;
     const gameInformation =
-    <div onClick={() => {this.handleSelectGame(this.props.name)}}>
-      <h4>{this.props.name}</h4>
-      <p>{this.props.minplayers} - {this.props.maxplayers} players </p>
-      <p>{this.props.minplaytime} - {this.props.maxplaytime} minutes </p>
-      <img src={this.props.thumburl}/>
-      <p>{this.props.descriptionpreview}</p>
+    <div className='gameItem-container' onClick={() => {this.handleSelectGame(this.props.name)}}>
+      <h4 className='gameItem-name'>{this.props.name}</h4>
+      <img className='gameItem-image' src={this.props.thumburl}/>
+      <p className='gameItem-players'>{this.props.minplayers} - {this.props.maxplayers} players </p>
+      <p className='gameItem-playtime'>{this.props.minplaytime} - {this.props.maxplaytime} minutes </p>
+      <p className='gameItem-description'>{this.props.descriptionpreview}</p>
     </div>;
     return (
-      <div >
+      <div className='gameInfo'>
         {gameInformation}
       </div>
     );

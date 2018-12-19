@@ -1,8 +1,10 @@
 import React from 'react';
+import '../sass/main.scss';
+
 
 function Header(){
   return (
-    <div>
+    <div className='header-background'>
       <h1>Game Keeper</h1>
     </div>
   );

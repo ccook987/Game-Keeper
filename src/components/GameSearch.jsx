@@ -2,11 +2,13 @@ import React from 'react';
 import { fetchGameTitle } from './../actions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import '../sass/main.scss';
+
 
 function GameSearch({dispatch, id}){
   let input;
   return (
-    <div>
+    <div className='search-background'>
       <form className='game-search' onSubmit={e => {
         e.preventDefault();
         if (!input.value.trim()) {

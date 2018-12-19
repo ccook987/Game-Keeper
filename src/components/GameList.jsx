@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import * as types from '../constants/actionTypes';
 import constants from './../constants';
 import GameItem from './GameItem';
+import '../sass/main.scss';
+
 
 class GameList extends React.Component {
   constructor(props, { state, dispatch }) {
@@ -19,7 +21,7 @@ class GameList extends React.Component {
     }
     if(!loading) {
       return (
-        <div>
+        <div className='gamelist-background'>
         {gameArray.gameArray.map(game => {
           return <GameItem
           key={game.id}
