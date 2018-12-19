@@ -3,14 +3,19 @@ import * as types from './../constants/ActionTypes';
 /* eslint-disable */
 // import firebase from 'firebase/app';
 import constants from './../../src/constants';
-import firebaseConfig from '../constants/firebaseConfig';
+const { firebaseConfig } = constants;
 require('firebase/database');
 const firebase = require('firebase/app');
 
 firebase.initializeApp(firebaseConfig);
-const gameToAdd = firebase.database().ref('games');
+const gameToAdd = firebase.database().ref('profileGames');
 /* eslint-enable */
 
+export function addGameToProfileList(selectedGame) {
+  return () => gameToAdd.push({
+    gameTitle: selectedGame
+  });
+}
 
 export const fetchGamesBegin = (title, id) => ({
   type: types.FETCH_GAMES_BEGIN,
@@ -28,19 +33,41 @@ export const fetchGamesFailure = error => ({
   payload: { error }
 });
 
-export const selectGame = name =>
+export const selectGame = gameTitle =>
 ({
   type: types.SELECT_GAME,
-  name
+  gameTitle: gameTitle
 });
 
+// export const receiveGame = name =>
+// ({
+//     type: types.RECEIVE_GAME,
+//     gameTitle: name
+//   });
 
 
-export function addGameToProfileList(selectedGame) {
-  return () => gameToAdd.push({
-    selectedGame: selectedGame
-  });
+
+export function receiveGame(gameFromFirebase) {
+  return {
+    type: types.RECEIVE_GAME,
+    game: gameFromFirebase
+  };
 }
+
+
+export function watchFirebaseGamesRef() {
+  return function(dispatch) {
+    gameToAdd.on('child_added', data => {
+      console.log(data);
+      const newGameEntry = Object.assign({}, data.val(), {
+              id: data.key,
+            });
+            console.log(newGameEntry);
+            dispatch(receiveGame(newGameEntry))
+    });
+  };
+}
+
 
 export function fetchGameTitle(title) {
   return dispatch => {

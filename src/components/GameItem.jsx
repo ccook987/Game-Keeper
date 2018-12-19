@@ -1,16 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchSelectedGame, selectGame, addGameToProfileList } from './../actions';
+import * as actions from './../actions';
 import constants from './../constants';
 import * as types from './../constants/ActionTypes';
+import firebase from 'firebase';
+import { addGameToProfileList } from './../actions';
 
 
 class GameItem extends React.Component {
   constructor(props, { state, dispatch }) {
     super(props, { state });
     this.handleSelectGame = this.handleSelectGame.bind(this);
+    // this.addGameToProfileList = this.addGameToProfileList.bind(this);
+
   }
+  
+  // componentWillMount() {
+  //     const { dispatch } = this.props;
+  //     const { watchFirebaseGamesRef } = actions;
+  //     dispatch(watchFirebaseGamesRef());
+  //   }
+  
+  // componentDidMount() {
+  //   const gameToAdd = firebase.database().ref('profileGames');
+  //   gameToAdd.on('value', (snapshot) => {
+  //     let profileGames = snapshot.val();
+  //     let newState = [];
+  //     for (let profileGame in profileGames) {
+  //       newState.push({
+  //         gameTitle: profileGames[profileGame].gameTitle
+  //       })
+  //     }
+  //     console.log(newState);
+  //     this.setState({
+  //       profileGames: newState
+  //     });
+  //     console.log(this.state);
+  // 
+  //   });
+  // }
   // function handleSavingSelectedTicket(ticketId){
   //   const { dispatch } = props;
   //   const action = {
@@ -20,6 +49,20 @@ class GameItem extends React.Component {
   //   dispatch(action);
   // }
 
+
+  // handleAddingNewGame(e) {
+  //     e.preventDefault();
+  //     console.log(this.props);
+  //     const gameToAdd = firebase.database().ref('profileGames');
+  //     const profileGame = {
+  //       gameTitle: this.props.state.selectedGame.gameTitle
+  //     }
+  //     gameToAdd.push(profileGame);
+  //     console.log(this.state);
+  //   }
+  
+
+  
   handleSelectGame(gameTitle) {
     // let gameTitle = e.target.value;
     console.log(gameTitle);
@@ -27,17 +70,19 @@ class GameItem extends React.Component {
       type: types.SELECT_GAME,
       gameTitle: gameTitle
     }
-    console.log(action);
+    // const { receiveGame } = actions;
+    // const { selectGame } = actions;
     console.log(this.props.dispatch);
     this.props.dispatch(action);
+    addGameToProfileList(gameTitle);
+    // this.props.dispatch(receiveGame)
    }
    
-    handleAddingNewGame(selectedGame, props, event) {
-    const { dispatch } = props;
-    event.preventDefault();
-    dispatch(addGameToProfileList(selectedGame));
-  }
-   
+  //   handleAddingNewGame(selectedGame, props, event, dispatch) {
+  //   event.preventDefault();
+  //   dispatch(addGameToProfileList(selectedGame));
+  // }
+  // 
 render() {
   const { error, loading, gameArray } = this.props;
 
