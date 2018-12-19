@@ -5,26 +5,11 @@ import * as types from './../constants/ActionTypes';
 import constants from './../constants';
 import GameItem from './GameItem';
 
-
-
 class GameList extends React.Component {
   constructor(props, { state, dispatch }) {
     super(props, { state });
   }
-
-
-  // handleChange(e) {
-  //   let gameTitle = e.currentTarget.value;
-  //   console.log(gameTitle);
-  //   let action = {
-  //     type: types.SELECT_GAME,
-  //     gameTitle
-  //   }
-  //   this.props.dispatch(action);
-  //  }
-
-
-
+  
   render() {
     const { error, loading, gameArray } = this.props;
     if (error) {
@@ -34,8 +19,8 @@ class GameList extends React.Component {
       return <div>Loading...</div>;
     }
     if(!loading) {
-    return (
-      <div>
+      return (
+        <div>
         {gameArray.gameArray.map(game => {
           return <GameItem
           key={game.id}
@@ -46,12 +31,11 @@ class GameList extends React.Component {
           thumburl={game.thumb_url}
           name={game.name}
           descriptionpreview={game.description_preview}
-           />
+          />
         })}
-      </div>
-    );
-
-  }
+        </div>
+      );
+    }
   }
 }
 

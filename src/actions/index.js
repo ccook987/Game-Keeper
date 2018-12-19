@@ -8,21 +8,12 @@ require('firebase/database');
 const firebase = require('firebase/app');
 import database from 'firebase'
 
-
-// firebase.initializeApp(firebaseConfig);
-const gameToAdd = firebase.database().ref('profileGames');
 /* eslint-enable */
 
-export function addGameToProfileList(selectedGame) {
-    gameToAdd.push({
-    gameTitle: selectedGame
-    });
-    }
+//the new tutorial code starts here//
 
-//this is the new tutorial code//
 export const addGame = (game) => ({type: types.ADD_GAME, game})
 export const removeGame = (game) => ({type: types.REMOVE_GAME, game})
-
 
 export function watchGameAddedEvent(dispatch) {
  firebase.database().ref(`/`).on('child_added', (snap) => {    dispatch(addGame(snap.val()));
@@ -35,13 +26,8 @@ export function watchGameRemovedEvent(dispatch) {
  });
 }
 
-//til here//
+//the new tutorial code ends here//
 
-
-export const retrieveGames = (games) => ({
-  type: types.RETRIEVE_GAMES,
-   games
- });
 
  export function getGamesThunk() {
  return dispatch => {
@@ -56,11 +42,9 @@ export const retrieveGames = (games) => ({
  }
 }
 
-
-export const fetchGamesBegin = (title, id) => ({
+export const fetchGamesBegin = (title) => ({
   type: types.FETCH_GAMES_BEGIN,
-  title,
-  id
+  title
 });
 
 export const fetchGamesSuccess = games => ({
@@ -73,36 +57,15 @@ export const fetchGamesFailure = error => ({
   payload: { error }
 });
 
-export const selectGame = gameTitle =>
-({
+export const selectGame = gameTitle => ({
   type: types.SELECT_GAME,
   gameTitle: gameTitle
 });
 
-// export const receiveGame = name =>
-// ({
-//     type: types.RECEIVE_GAME,
-//     gameTitle: name
-//   });
-
-
-
-export function receiveGame(gameFromFirebase) {
-  return {
-    type: types.RECEIVE_GAME,
-    game: gameFromFirebase
-  };
-}
-
-
-export function watchFirebaseGamesRef() {
-  return function(dispatch) {
-    gameToAdd.on('child_added', data => {
-      console.log(data.val());
-    });
-  };
-}
-
+export const retrieveGames = (games) => ({
+  type: types.RETRIEVE_GAMES,
+  games
+});
 
 export function fetchGameTitle(title) {
   return dispatch => {
@@ -114,10 +77,8 @@ export function fetchGameTitle(title) {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(json => {
-      console.log('Api results:', json)
       dispatch(fetchGamesSuccess(json));
-        return json
-
+      return json
     })
     .catch(error => dispatch(fetchGamesFailure(error)));
   };

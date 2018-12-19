@@ -16,33 +16,7 @@ import firebase from 'firebase';
 
 
 class App extends React.Component {
-  
-  componentWillMount() {
-  const { dispatch } = this.props;
-  const { watchFirebaseGamesRef } = actions;
-  dispatch(watchFirebaseGamesRef());
-}
-  
-// componentDidMount() {
-//   const gameRef = firebase.database().ref('hello');
-//     gameRef.on('value', (snapshot) => {
-//       let gamers = snapshot.val();
-//       let newState = [];
-//       for (let gamer in gamers) {
-//         newState.push({
-//           id: gamer,
-//           gameTitle: gamers[gamer].gameTitle,
-//         })
-//       }
-//       console.log(newState);
-//       this.setState({
-//         gamers: newState
-//       });
-//       console.log(this.state);
-// 
-// 
-//   });
-// }
+
   render() {
     return (
       <div className="App">

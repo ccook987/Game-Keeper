@@ -12,10 +12,6 @@ import thunkMiddleware from 'redux-thunk';
 import fetchGameResultsReducer from './reducers/fetchGameResultsReducer';
 import rootReducer from './reducers';
 
-
-
-
-
 const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
 
 let unsubscribe = store.subscribe(() =>
@@ -30,18 +26,6 @@ ReactDOM.render(
   </HashRouter>,
   document.getElementById('root'));
 
-// const render = (Component) => {
-//   ReactDOM.render(
-//     <AppContainer>
-//       <HashRouter>
-//         <Component/>
-//       </HashRouter>
-//     </AppContainer>,
-//     document.getElementById('root')
-//   );
-// };
-// 
-// render(App);
 
 /*eslint-disable */
 if (module.hot) {

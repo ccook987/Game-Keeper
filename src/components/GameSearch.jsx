@@ -8,21 +8,20 @@ function GameSearch({dispatch, id}){
   return (
     <div>
       <form className='game-search' onSubmit={e => {
-          e.preventDefault();
-          if (!input.value.trim()) {
-            return;
-          }
-          dispatch(fetchGameTitle(input.value.trim()));
-          input.value = '';
-        }}>
+        e.preventDefault();
+        if (!input.value.trim()) {
+          alert('Please Enter a Valid Search');
+          return
+        }
+        dispatch(fetchGameTitle(input.value.trim()));
+        input.value = '';
+      }}>
         <input placeholder="Game Title" ref={node => {
-            input = node;
-          }}></input>
-        <button>Submit</button>
+          input = node;
+        }}>
+        </input>
+        <button>Search</button>
       </form>
-      <div>
-
-      </div>
     </div>
   );
 }
