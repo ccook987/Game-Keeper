@@ -1,19 +1,79 @@
-.profilegames-container {
+.profilegames-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profilegames-outer-container {
+  background-color: yellow;
+  width: 30em;
+  height:50em;
+  padding: 1em;
+}
+
+.profilegames-inner-container {
+  background-color: blue;
+  height: 50em;
+  width: 30em;
+}
+
+.profilegames-image-container {
+  height: 25em;
+  width: 100%;
+  background-color: white;
+}
+
+.profilegames-image {
+  height: 100%;
+  width: 100%;
+}
+
+.profilegames-bio-container {
+background-color: pink;
+}
+
+.profilegames-favorite-container {
+background-color: red;
+}
+
+.profilegames-currently-playing-container {
+background-color: orange;
+}
+
+.collection {
+}
+
+.profilegames-list-container {
   background-color: grey;
+  height: 19.4em;
+  width: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 }
 
 .profilegames-unordered-list {
-text-align: left;
+  // text-align: justify;
+  // padding-left: 1em;
+  background-color: lightgray;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+
 }
 
 .profilegames-list-item {
   list-style: none;
   line-height: 1.5;
-  background-color: lightgray;
+  padding-left: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .remove-button {
-  width: 1em;
+  width: 2em;
   height: 1em;
+  // text-align: left;
+  // vertical-align: baseline;
   // border-radius: 25% 10%;
 }

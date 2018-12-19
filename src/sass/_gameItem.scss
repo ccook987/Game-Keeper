@@ -1,10 +1,15 @@
-.gameItem-container {
+.gameItem-outer-container {
   background-color: yellow;
   height: 25em;
   width: 20em;
   margin-bottom: 2em;
   padding: 1em;
 
+}
+
+.gameItem-inner-container {
+  background-color: blue;
+  height: 25em;
 }
 
 .gameItem-name {
@@ -16,43 +21,49 @@ justify-content: center;
 align-items: center;
 }
 
+.gameItem-image-container {
+  height: 11em;
+  width: 20em;
+}
+
 .gameItem-image {
   // height: 150px;
   // width: 150px;
-  height: 11em;
-  width: 20em;
+  // height: 11em;
+  // width: 20em;
+  height: 100%;
+  width: 100%;
   // padding-bottom: 1em;
-
-}
-
-.gameItem-players {
-  // padding-bottom: 1em;
-
-}
-
-.gameItem-playtime {
-  // padding-bottom: 1em;
-
-}
-
-.gameItem-description {
-  height: 9em;
-  width: 19.5em;
-  // margin-bottom: 1em;
-  overflow-y: scroll;
-  text-align: center;
-}
-
-.gameInfo {
-}
-
-.gameItem-inner-container {
-  background-color: blue;
-  height: 25em;
 }
 
 .players-playtime-container {
   background-color: red;
   display: flex;
   justify-content: space-around;
+}
+
+.gameItem-players {
+  // padding-bottom: 1em;
+  background-color: orange;
+}
+
+.gameItem-playtime {
+  // padding-bottom: 1em;
+  background-color: orange;
+
+
+}
+
+.gameItem-description {
+  height: 9em;
+  width: 20em;
+  // margin-bottom: 1em;
+  overflow-y: scroll;
+  // text-align: center;
+  // display: flex;
+  // justify-content: center;
+  background-color: violet;
+}
+
+.gameInfo {
 }
