@@ -8,32 +8,51 @@
 }
 
 .gameItem-name {
-padding-bottom: 1em;
-height: 2.5em;
+// padding-bottom: 1em;
+height: 3em;
+background-color: beige;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .gameItem-image {
-  height: 150px;
-  width: 150px;
-  padding-bottom: 1em;
+  // height: 150px;
+  // width: 150px;
+  height: 11em;
+  width: 20em;
+  // padding-bottom: 1em;
 
 }
 
 .gameItem-players {
-  padding-bottom: 1em;
+  // padding-bottom: 1em;
 
 }
 
 .gameItem-playtime {
-  padding-bottom: 1em;
+  // padding-bottom: 1em;
 
 }
 
 .gameItem-description {
-  height: 7em;
-  margin-bottom: 1em;
+  height: 9em;
+  width: 19.5em;
+  // margin-bottom: 1em;
   overflow-y: scroll;
+  text-align: center;
 }
 
 .gameInfo {
+}
+
+.gameItem-inner-container {
+  background-color: blue;
+  height: 25em;
+}
+
+.players-playtime-container {
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
 }

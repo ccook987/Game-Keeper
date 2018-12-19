@@ -29,7 +29,7 @@ class GameList extends React.Component {
           maxplayers={game.max_players}
           minplaytime={game.min_playtime}
           maxplaytime={game.max_playtime}
-          thumburl={game.thumb_url}
+          imageurl={game.image_url}
           name={game.name}
           descriptionpreview={game.description_preview}
           />

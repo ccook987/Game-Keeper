@@ -29,16 +29,21 @@ class GameItem extends React.Component {
     const { error, loading, gameArray } = this.props;
     const gameInformation =
     <div className='gameItem-container' onClick={() => {this.handleSelectGame(this.props.name)}}>
+    <div className='gameItem-inner-container'>
       <h4 className='gameItem-name'>{this.props.name}</h4>
-      <img className='gameItem-image' src={this.props.thumburl}/>
+      <img className='gameItem-image' src={this.props.imageurl}/>
+      <div className='players-playtime-container'>
       {this.props.minplayers !== null &&
       <p className='gameItem-players'>{this.props.minplayers} - {this.props.maxplayers} players </p> }
       {this.props.minplaytime !== null &&
-      <p className='gameItem-playtime'>{this.props.minplaytime} - {this.props.maxplaytime} minutes </p> }
+      <p className='gameItem-playtime'>{this.props.minplaytime} - {this.props.maxplaytime} min </p> }
+      </div>
       <p className='gameItem-description'>{this.props.descriptionpreview}</p>
+      </div>
     </div>;
     return (
       <div className='gameInfo'>
+      
         {gameInformation}
       </div>
     );
