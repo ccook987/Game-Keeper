@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from './../actions';
 import constants from './../constants';
-import * as types from './../constants/ActionTypes';
+import * as types from '../constants/actionTypes';
 import firebase from 'firebase';
-import { addGameToProfileList } from './../actions';
 import { addGameToFirebase, removeGameFromFirebase } from '../constants/firebaseConfig';
 
 class GameItem extends React.Component {

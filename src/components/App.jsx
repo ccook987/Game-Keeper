@@ -7,12 +7,7 @@ import ProfileGames from './ProfileGames';
 import Home from './Home';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
-import * as actions from './../actions';
-import * as types from './../constants/ActionTypes';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import constants from './../constants';
-import firebase from 'firebase';
 
 
 class App extends React.Component {

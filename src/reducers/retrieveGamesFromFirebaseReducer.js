@@ -1,5 +1,5 @@
 import constants from './../constants';
-const { initialState, types } = constants;
+const { types } = constants;
 
 const retrieveGamesFromFirebaseReducer = (state = [], action) => {
   switch (action.type) {

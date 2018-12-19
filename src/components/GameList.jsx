@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchSelectedGame, selectGame } from './../actions';
-import * as types from './../constants/ActionTypes';
+import * as types from '../constants/actionTypes';
 import constants from './../constants';
 import GameItem from './GameItem';
 

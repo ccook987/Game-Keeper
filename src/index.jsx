@@ -9,7 +9,6 @@ import { createStore, applyMiddleware } from 'redux';
 import middlewareLogger from './middleware/middleware-logger';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
-import fetchGameResultsReducer from './reducers/fetchGameResultsReducer';
 import rootReducer from './reducers';
 
 const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));

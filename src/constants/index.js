@@ -1,4 +1,4 @@
-import * as types from './ActionTypes';
+import * as types from './actionTypes';
 import { initialState } from './InitialState';
 import firebaseConfig from './firebaseConfig';
 

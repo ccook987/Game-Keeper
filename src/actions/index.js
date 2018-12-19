@@ -1,5 +1,4 @@
-import v4 from 'uuid/v4';
-import * as types from './../constants/ActionTypes';
+import * as types from '../constants/actionTypes';
 /* eslint-disable */
 // import firebase from 'firebase/app';
 import constants from './../../src/constants';
@@ -69,7 +68,6 @@ export const retrieveGames = (games) => ({
 
 export function fetchGameTitle(title) {
   return dispatch => {
-    const localGameId = v4();
     dispatch(fetchGamesBegin(title));
     title = title.replace(' ', '%20');
     return fetch('https://www.5colorcombo.com/api/search?name=' + title + '&limit=10&order-by=popularity')

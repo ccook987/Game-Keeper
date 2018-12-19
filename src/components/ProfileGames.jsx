@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchSelectedGame, selectGame, getGamesThunk, watchGameAddedEvent, watchGameRemovedEvent } from './../actions';
-import * as types from './../constants/ActionTypes';
+import { getGamesThunk, watchGameAddedEvent, watchGameRemovedEvent } from './../actions';
+import * as types from '../constants/actionTypes';
 import constants from './../constants';
 import {addGameToFirebase, removeGameFromFirebase} from '../constants/firebaseConfig';
 import '../sass/_profileGames.scss';
