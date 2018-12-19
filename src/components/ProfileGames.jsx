@@ -20,11 +20,6 @@ class ProfileGames extends Component {
       </div>
     )}
   }
-  
-  // const mapStateToProps = state => ({
-    //   state: state,
-    //   selectedGame: state.selectedGame
-    // });
     
     const mapState = state => ({
       games: state
