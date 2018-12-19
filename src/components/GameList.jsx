@@ -21,7 +21,7 @@ class GameList extends React.Component {
     }
     if(!loading) {
       return (
-        <div className='gamelist-background'>
+        <div className='gamelist-container'>
         {gameArray.gameArray.map(game => {
           return <GameItem
           key={game.id}

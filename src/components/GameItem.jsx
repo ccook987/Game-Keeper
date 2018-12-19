@@ -31,7 +31,7 @@ class GameItem extends React.Component {
     <div className='gameItem-container' onClick={() => {this.handleSelectGame(this.props.name)}}>
     <div className='gameItem-inner-container'>
       <h4 className='gameItem-name'>{this.props.name}</h4>
-      <img className='gameItem-image' src={this.props.imageurl}/>
+      <img className='gameItem-image' src={this.props.imageurl} alt='boardgame'/>
       <div className='players-playtime-container'>
       {this.props.minplayers !== null &&
       <p className='gameItem-players'>{this.props.minplayers} - {this.props.maxplayers} players </p> }

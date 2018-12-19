@@ -9,10 +9,10 @@ import '../sass/main.scss';
 class ProfileGames extends Component {
   render () {
     return ( 
-      <div className='profilegames-background'>
-      <ul>
+      <div className='profilegames-container'>
+      <ul className='profilegames-unordered-list' >
       {this.props.games.game.map(item => 
-        <li key={item.id}>{item.game}<button
+        <li className='profilegames-list-item' key={item.id}>{item.game}<button className='remove-button'
         onClick={() => removeGameFromFirebase(item.id)}>X</button>
         </li>
       )} 

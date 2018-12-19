@@ -8,8 +8,8 @@ import '../sass/main.scss';
 function GameSearch({dispatch, id}){
   let input;
   return (
-    <div className='search-background'>
-      <form className='game-search' onSubmit={e => {
+    <div className='search-container'>
+      <form className='search-form' onSubmit={e => {
         e.preventDefault();
         if (!input.value.trim()) {
           alert('Please Enter a Valid Search');
@@ -18,7 +18,8 @@ function GameSearch({dispatch, id}){
         dispatch(fetchGameTitle(input.value.trim()));
         input.value = '';
       }}>
-        <input placeholder="Game Title" ref={node => {
+      <h4>Enter Search Here:</h4>
+        <input className='search-input' placeholder="Search for a Game" ref={node => {
           input = node;
         }}>
         </input>

@@ -1,7 +1,19 @@
-li {
-  list-style: none;
+.profilegames-container {
+  background-color: grey;
 }
 
-.profilegames-background {
-  background-color: grey;
+.profilegames-unordered-list {
+text-align: left;
+}
+
+.profilegames-list-item {
+  list-style: none;
+  line-height: 1.5;
+  background-color: lightgray;
+}
+
+.remove-button {
+  width: 1em;
+  height: 1em;
+  // border-radius: 25% 10%;
 }
