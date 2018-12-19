@@ -6,16 +6,56 @@ import constants from './../../src/constants';
 const { firebaseConfig } = constants;
 require('firebase/database');
 const firebase = require('firebase/app');
+import database from 'firebase'
 
-firebase.initializeApp(firebaseConfig);
+
+// firebase.initializeApp(firebaseConfig);
 const gameToAdd = firebase.database().ref('profileGames');
 /* eslint-enable */
 
 export function addGameToProfileList(selectedGame) {
     gameToAdd.push({
     gameTitle: selectedGame
-});
+    });
     }
+
+//this is the new tutorial code//
+export const addGame = (game) => ({type: types.ADD_GAME, game})
+export const removeGame = (game) => ({type: types.REMOVE_GAME, game})
+
+
+export function watchGameAddedEvent(dispatch) {
+ firebase.database().ref(`/`).on('child_added', (snap) => {    dispatch(addGame(snap.val()));
+ });
+}
+
+export function watchGameRemovedEvent(dispatch) {
+ firebase.database().ref(`/`).on('child_removed', (snap) => {
+ dispatch(removeGame(snap.val()));
+ });
+}
+
+//til here//
+
+
+export const retrieveGames = (games) => ({
+  type: types.RETRIEVE_GAMES,
+   games
+ });
+
+ export function getGamesThunk() {
+ return dispatch => {
+ const games = [];
+ firebase.database().ref(`/`).once('value', snap => {
+  snap.forEach(data => {
+  let game = data.val();
+  games.push(game)
+  })
+ })
+ .then(() => dispatch(retrieveGames(games)))
+ }
+}
+
 
 export const fetchGamesBegin = (title, id) => ({
   type: types.FETCH_GAMES_BEGIN,

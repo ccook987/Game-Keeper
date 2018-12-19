@@ -6,6 +6,7 @@ import constants from './../constants';
 import * as types from './../constants/ActionTypes';
 import firebase from 'firebase';
 import { addGameToProfileList } from './../actions';
+import { addGameToFirebase, removeGameFromFirebase } from '../constants/firebaseConfig';
 
 
 class GameItem extends React.Component {
@@ -74,7 +75,7 @@ class GameItem extends React.Component {
     // const { selectGame } = actions;
     console.log(this.props.dispatch);
     this.props.dispatch(action);
-    addGameToProfileList(gameTitle);
+    addGameToFirebase(gameTitle);
     // this.props.dispatch(receiveGame)
    }
    

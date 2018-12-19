@@ -1,22 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchSelectedGame, selectGame } from './../actions';
+import { fetchSelectedGame, selectGame, getGamesThunk, watchGameAddedEvent, watchGameRemovedEvent } from './../actions';
 import * as types from './../constants/ActionTypes';
 import constants from './../constants';
+import {addGameToFirebase, removeGameFromFirebase} from '../constants/firebaseConfig';
 
 
 
 class ProfileGames extends Component {
-  constructor(props, { state }) {
-    super(props, { state });
 
-  }  
 
   render () {
     
                   return ( 
-                    <div>ProfileGames Component</div>
-                  )
+                    <div>
+                     <h2> Todo:</h2>
+                     <ul>
+                      {this.props.games.game.map(item => <li key={item.id}>{item.game}<button
+                      onClick={() => removeGameFromFirebase(item.id)}>x</button></li>)}  </ul>
+                    </div>                  )
 
   }
 }
@@ -29,9 +31,20 @@ class ProfileGames extends Component {
   //       </ul>
   // </div>
 
-const mapStateToProps = state => ({
-  state: state,
-  selectedGame: state.selectedGame
-});
+// const mapStateToProps = state => ({
+//   state: state,
+//   selectedGame: state.selectedGame
+// });
 
-export default connect(mapStateToProps)(ProfileGames);
+const mapState = state => ({
+ games: state
+ })
+const mapDispatch = dispatch => {
+ dispatch(getGamesThunk())
+ watchGameAddedEvent(dispatch)
+ watchGameRemovedEvent(dispatch)
+ return {
+ }
+}
+
+export default connect(mapState, mapDispatch)(ProfileGames);
