@@ -4,3 +4,5 @@ export const FETCH_GAMES_FAILURE = 'FETCH_GAMES_FAILURE';
 
 export const SELECT_GAME = 'SELECT_GAME';
 export const RECEIVE_GAME = 'RECEIVE_GAME';
+
+export const RETRIEVE_GAMES = 'RETRIEVE_GAMES';

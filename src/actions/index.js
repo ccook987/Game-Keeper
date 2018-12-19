@@ -12,10 +12,10 @@ const gameToAdd = firebase.database().ref('profileGames');
 /* eslint-enable */
 
 export function addGameToProfileList(selectedGame) {
-  return () => gameToAdd.push({
+    gameToAdd.push({
     gameTitle: selectedGame
-  });
-}
+});
+    }
 
 export const fetchGamesBegin = (title, id) => ({
   type: types.FETCH_GAMES_BEGIN,
@@ -58,12 +58,7 @@ export function receiveGame(gameFromFirebase) {
 export function watchFirebaseGamesRef() {
   return function(dispatch) {
     gameToAdd.on('child_added', data => {
-      console.log(data);
-      const newGameEntry = Object.assign({}, data.val(), {
-              id: data.key,
-            });
-            console.log(newGameEntry);
-            dispatch(receiveGame(newGameEntry))
+      console.log(data.val());
     });
   };
 }

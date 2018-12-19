@@ -16,19 +16,7 @@ const selectGameFromListReducer = (state = initialState.selectedGame, action) =>
     newSelectedGameStateSlice = Object.assign({}, state, {"gameTitle" : selectedGame});
     console.log(newSelectedGameStateSlice);
     return newSelectedGameStateSlice;
-    case types.PUSH_GAME:
-    selectedGame = Object.assign({}, state[action.gameTitle], {
-      gameTitle: action.gameTitle,
-      gameArray: action.profileGames
-    });
-    newSelectedGameStateSlice = Object.assign({}, state, {
-      [action.gameTitle]: selectedGame
-    });
-    return newSelectedGameStateSlice;
-    case types.RECEIVE_GAME:
-      newSelectedGameStateSlice = Object.assign({}, state);
-      newSelectedGameStateSlice[action.selectedGame.id] = action.gameTitle;
-      return newSelectedGameStateSlice;
+
 
   default:
     return state;
