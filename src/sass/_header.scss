@@ -30,19 +30,19 @@
 
 .header-links-container {
   display: flex;
-  justify-content: space-around;
-  width: 10em;
+  // justify-content: space-between;
+  width: 8em;
   // margin-left: 20em;
 }
 
 .logo {
-  display: flex;
+  // display: flex;
+  padding-left: 110px;
   margin: 0 auto;
 }
 .header-right {
   display: flex;
-  // justify-content: space-around;
-}
+margin-right: 10px;}
 
 .header-links {
   background:
@@ -68,4 +68,5 @@
     height: 1.5em;
     text-align: center;
     justify-content: center;
+
 }

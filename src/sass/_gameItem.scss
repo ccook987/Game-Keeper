@@ -1,21 +1,65 @@
 .gameItem-outer-container {
-  background-color: yellow;
-  height: 25em;
+  // background-color: yellow;
+  height: 27em;
   width: 20em;
   margin-bottom: 2em;
   padding: 1em;
 
+  border: 1px solid black;
+  margin: 0 auto;
+  border-radius: 25px;
+  box-shadow: -8px 9px 16px -3px gray;
+  background: #171314;
+  margin-bottom: 3em;
+
 }
 
 .gameItem-inner-container {
-  background-color: blue;
-  height: 25em;
+  // background-color: blue;
+  height: 26.5em;
+// padding-top: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-image: url('https://image.ibb.co/e1XKAS/green_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-color: #bbb;
+  padding-top: 10px;
+}
+
+.gameItem-name-container {
+  width: 18.5em;
+  background:
+      linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
+      url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
+  display: flex;
+  margin: 0 auto;
+  // margin-top: 10px;
+  // margin-left: 5px;
+  // margin-right: 5px;
+  padding: 5px 0;
+
+  // display: flex;
+  justify-content: space-between;
+  border-radius: 18px/40px;
+  border-bottom: 4px solid #a9a9a9;
+    border-left: 2px solid #a9a9a9;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    box-shadow:
+       0 0 0 2px #171314,
+       0 0 0 5px #26714A,
+       -3px 3px 2px 5px #171314;
 }
 
 .gameItem-name {
 // padding-bottom: 1em;
+margin: 0 auto;
+// letter-spacing: 2;
 height: 3em;
-background-color: beige;
+// background-color: beige;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -23,7 +67,19 @@ align-items: center;
 
 .gameItem-image-container {
   height: 11em;
-  width: 20em;
+  width: 17em;
+
+  margin: 0 auto;
+  border-bottom: 4px solid #a9a9a9;
+    border-left: 2px solid #a9a9a9;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    box-shadow:
+       0 0 0 2px #171314,
+       0 0 0 5px #26714A,
+       -3px 3px 2px 5px #171314;
+       margin-top: 9px;
+
 }
 
 .gameItem-image {
@@ -37,32 +93,75 @@ align-items: center;
 }
 
 .players-playtime-container {
-  background-color: red;
+  // background-color: red;
   display: flex;
   justify-content: space-around;
+  width: 18.5em;
+
+  margin: 0 auto;
+  background:
+      linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
+      url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
+  // display: flex;
+  // margin-top: 10px;
+  // margin-left: 5px;
+  // margin-right: 5px;
+  // padding: 8px 2px;
+  // display: flex;
+  justify-content: space-between;
+  border-radius: 18px/40px;
+  border-bottom: 4px solid #a9a9a9;
+    border-left: 2px solid #a9a9a9;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    box-shadow:
+       0 0 0 2px #171314,
+       0 0 0 5px #26714A,
+       -3px 3px 2px 5px #171314;
+       margin-bottom: 8px;
+
 }
 
 .gameItem-players {
   // padding-bottom: 1em;
-  background-color: orange;
+  // background-color: orange;
 }
 
 .gameItem-playtime {
   // padding-bottom: 1em;
-  background-color: orange;
+  // background-color: orange;
 
 
 }
 
 .gameItem-description {
-  height: 9em;
-  width: 20em;
+  height: 7.2em;
+  width: 18.5em;
   // margin-bottom: 1em;
   overflow-y: scroll;
   // text-align: center;
   // display: flex;
   // justify-content: center;
-  background-color: violet;
+  margin: 0 auto;
+  // flex-direction: column;
+  // justify-content: center;
+  // margin: 0 10px;
+  background: #d3ded6;
+  background-image: url(https://image.ibb.co/dFcNx7/tile_bg_2.jpg);
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // padding: 50px 6px;
+  // font-size: 1.2em;
+  border-radius: 18px/40px;
+  border-bottom: 4px solid #a9a9a9;
+  border-left: 2px solid #a9a9a9;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  box-shadow:
+    0 0 0 2px #171314,
+    0 0 0 5px #26714A,
+    -3px 3px 2px 5px #171314;
 }
 
 .gameInfo {

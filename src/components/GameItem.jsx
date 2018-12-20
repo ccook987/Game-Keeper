@@ -31,7 +31,9 @@ class GameItem extends React.Component {
     const gameInformation =
     <div className='gameItem-outer-container' onClick={() => {this.handleSelectGame(this.props.name)}}>
     <div className='gameItem-inner-container'>
+      <div className='gameItem-name-container'>
       <h4 className='gameItem-name'>{this.props.name}</h4>
+      </div>
       <div className='gameItem-image-container'>
       <img className='gameItem-image' src={this.props.imageurl} alt='boardgame'/>
       </div>

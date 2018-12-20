@@ -8,7 +8,7 @@ function Header(){
     <div className='header-container'>
     <div className='logo'>
       <h1>Game Keeper</h1>
-      </div>
+    </div>
       <div className='header-right'>
       
       <div className='header-links-container'>
