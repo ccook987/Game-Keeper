@@ -33,10 +33,14 @@ background-color: pink;
 
 .profilegames-favorite-container {
 background-color: red;
+display: flex;
+justify-content: center;
 }
 
 .profilegames-currently-playing-container {
 background-color: orange;
+display: flex;
+justify-content: center;
 }
 
 .collection {

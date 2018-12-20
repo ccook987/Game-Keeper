@@ -21,13 +21,23 @@ class ProfileGames extends Component {
               <p>"Casual gamer. Big fan of RPGs and Co-op games. Always down for a game night!"</p>
             </div>
             <div className='profilegames-favorite-container'>
-              <h4>Favorite Game: Castle Panic</h4>
+              <h4>Favorite Game: </h4>
+              <select>{this.props.games.game.map(item => 
+                <option key={item.id}>{item.game}
+                </option>
+                )}
+                </select>
             </div>
             <div className='profilegames-currently-playing-container'>
-              <h4>Currently Playing: Ticket to Ride</h4>
+            <h4>Currently Playing: </h4>
+            <select>{this.props.games.game.map(item => 
+              <option key={item.id}>{item.game}
+              </option>
+              )}
+              </select>
             </div>
             <div className='profilegames-list-container'>
-            <h4 className='collection'>Collection: 12</h4>
+            <h4 className='collection'>Games in Collection: {this.props.games.game.length}</h4>
               <ul className='profilegames-unordered-list' >
               {this.props.games.game.map(item => 
                 <li className='profilegames-list-item' key={item.id}>{item.game}<button className='remove-button'
