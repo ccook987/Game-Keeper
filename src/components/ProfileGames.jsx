@@ -15,7 +15,10 @@ class ProfileGames extends React.Component {
       <div className='profilegames-wrapper'>
         <div className='profilegames-outer-container'>
           <div className='profilegames-inner-container'>
-            <div className='profilegames-image-container'>
+          <div className='profilegames-username-container'>
+          <h4 className='username'>CCOOK987</h4>
+          </div>
+            <div className='profilegames-image-box'>
               <img className='profilegames-image' src={wizard} alt='user profile'/>
             </div>
             <div className='profilegames-bio-container'>
