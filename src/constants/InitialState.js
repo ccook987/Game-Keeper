@@ -7,5 +7,7 @@ export const initialState = {
     gameTitle: null,
     id: null
   },
+  favoriteGame: null,
+  currentlyPlayingGame: null,
   profileGames: []
 };
