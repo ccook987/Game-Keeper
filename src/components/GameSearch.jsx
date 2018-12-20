@@ -24,11 +24,11 @@ function GameSearch({dispatch, id}){
         input.value = '';
       }}>
       <h4>Enter Search Here:</h4>
-        <input className='search-input' placeholder="Search for a Game" ref={node => {
+        <input className='search-input' placeholder="Game Title" ref={node => {
           input = node;
         }}>
         </input>
-        <button>Search</button>
+        <button className='search-button'>Search</button>
       </form>
     </div>
     <GameList />
