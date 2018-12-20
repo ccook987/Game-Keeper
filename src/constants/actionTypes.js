@@ -6,3 +6,5 @@ export const RECEIVE_GAME = 'RECEIVE_GAME';
 export const RETRIEVE_GAMES = 'RETRIEVE_GAMES';
 export const ADD_GAME = 'ADD_GAME';
 export const REMOVE_GAME = 'REMOVE_GAME';
+
+// export const SELECT_FAVORITE = 'SELECT_FAVORITE';

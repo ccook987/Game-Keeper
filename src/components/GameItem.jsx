@@ -24,6 +24,7 @@ class GameItem extends React.Component {
     this.props.dispatch(action);
     addGameToFirebase(gameTitle);
   }
+
   
   render() {
     const { error, loading, gameArray } = this.props;

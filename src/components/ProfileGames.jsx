@@ -8,14 +8,15 @@ import '../sass/main.scss';
 import wizard from '../assets/images/wizard.svg';
 
 
-class ProfileGames extends Component {
+class ProfileGames extends React.Component {
+  
   render () {
     return (
       <div className='profilegames-wrapper'>
         <div className='profilegames-outer-container'>
           <div className='profilegames-inner-container'>
             <div className='profilegames-image-container'>
-              <img className='profilegames-image' src={wizard}/>
+              <img className='profilegames-image' src={wizard} alt='user profile'/>
             </div>
             <div className='profilegames-bio-container'>
               <p>"Casual gamer. Big fan of RPGs and Co-op games. Always down for a game night!"</p>

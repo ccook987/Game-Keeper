@@ -6,7 +6,7 @@ import GameList from './GameList';
 import ProfileGames from './ProfileGames';
 import Home from './Home';
 import Error404 from './Error404';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
@@ -16,11 +16,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header/>
-        <GameSearch/>
-        <GameList/>
-        <ProfileGames/>
         <Switch>
-          <Route exact path='/' component={Home}/>
+          <Route exact path='/' render={()=><GameSearch/>}/>
+          <Route path='/profile' render={()=><ProfileGames/>}/>
           <Route component={Error404} />
         </Switch>
       </div>
@@ -34,4 +32,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(App);
+export default withRouter(connect(mapStateToProps)(App));

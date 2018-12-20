@@ -3,11 +3,16 @@ import { fetchGameTitle } from './../actions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import '../sass/main.scss';
+import GameList from './GameList';
 
 
 function GameSearch({dispatch, id}){
   let input;
+  
   return (
+    <div>
+    
+    
     <div className='search-container'>
       <form className='search-form' onSubmit={e => {
         e.preventDefault();
@@ -25,6 +30,8 @@ function GameSearch({dispatch, id}){
         </input>
         <button>Search</button>
       </form>
+    </div>
+    <GameList />
     </div>
   );
 }

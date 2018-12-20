@@ -67,6 +67,11 @@ export const retrieveGames = (games) => ({
   games
 });
 
+// export const selectFavorite = gameTitle => ({
+//   type: types.SELECT_FAVORITE,
+//   gameTitle: gameTitle
+// });
+
 export function fetchGameTitle(title) {
   return dispatch => {
     dispatch(fetchGamesBegin(title));
