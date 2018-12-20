@@ -41,7 +41,7 @@ class ProfileGames extends React.Component {
             <h4 className='collection'>Games in Collection: {this.props.games.game.length}</h4>
               <ul className='profilegames-unordered-list' >
               {this.props.games.game.map(item => 
-                <li className='profilegames-list-item' key={item.id}>{item.game}<button className='remove-button'
+                <li className='profilegames-list-item' key={item.value}>{item.game}<button className='remove-button'
                 onClick={() => removeGameFromFirebase(item.id)}>X</button>
                 </li>
                 )} 
