@@ -10,7 +10,7 @@ function GameSearch({dispatch, id}){
   let input;
   
   return (
-    <div>
+    <div className='outer-search-container'>
       <div className='search-container'>
         <form className='search-form' onSubmit={e => {
           e.preventDefault();
