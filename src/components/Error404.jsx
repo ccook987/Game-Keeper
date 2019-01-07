@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../sass/main.scss';
 
-
 function Error404(props){
   return (
     <div>

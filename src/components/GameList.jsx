@@ -22,18 +22,18 @@ class GameList extends React.Component {
     if(!loading) {
       return (
         <div className='gamelist-container'>
-        {gameArray.gameArray.map(game => {
-          return <GameItem
-          key={game.id}
-          minplayers={game.min_players}
-          maxplayers={game.max_players}
-          minplaytime={game.min_playtime}
-          maxplaytime={game.max_playtime}
-          imageurl={game.image_url}
-          name={game.name}
-          descriptionpreview={game.description_preview}
-          />
-        })}
+          {gameArray.gameArray.map(game => {
+            return <GameItem
+            key={game.id}
+            minplayers={game.min_players}
+            maxplayers={game.max_players}
+            minplaytime={game.min_playtime}
+            maxplaytime={game.max_playtime}
+            imageurl={game.image_url}
+            name={game.name}
+            descriptionpreview={game.description_preview}
+            />
+          })}
         </div>
       );
     }

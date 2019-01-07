@@ -25,25 +25,24 @@ class GameItem extends React.Component {
     addGameToFirebase(gameTitle);
   }
 
-  
   render() {
     const { error, loading, gameArray } = this.props;
     const gameInformation =
     <div className='gameItem-outer-container' onClick={() => {this.handleSelectGame(this.props.name)}}>
-    <div className='gameItem-inner-container'>
-      <div className='gameItem-name-container'>
-      <h4 className='gameItem-name'>{this.props.name}</h4>
-      </div>
-      <div className='gameItem-image-container'>
-      <img className='gameItem-image' src={this.props.imageurl} alt='boardgame'/>
-      </div>
-      <div className='players-playtime-container'>
-      {this.props.minplayers !== null &&
-      <p className='gameItem-players'>{this.props.minplayers} - {this.props.maxplayers} players </p> }
-      {this.props.minplaytime !== null &&
-      <p className='gameItem-playtime'>{this.props.minplaytime} - {this.props.maxplaytime} min </p> }
-      </div>
-      <p className='gameItem-description'>{this.props.descriptionpreview}</p>
+      <div className='gameItem-inner-container'>
+        <div className='gameItem-name-container'>
+          <h4 className='gameItem-name'>{this.props.name}</h4>
+        </div>
+        <div className='gameItem-image-container'>
+          <img className='gameItem-image' src={this.props.imageurl} alt='boardgame'/>
+        </div>
+        <div className='players-playtime-container'>
+          {this.props.minplayers !== null &&
+          <p className='gameItem-players'>{this.props.minplayers} - {this.props.maxplayers} players </p> }
+          {this.props.minplaytime !== null &&
+          <p className='gameItem-playtime'>{this.props.minplaytime} - {this.props.maxplaytime} min </p> }
+        </div>
+        <p className='gameItem-description'>{this.props.descriptionpreview}</p>
       </div>
     </div>;
     return (

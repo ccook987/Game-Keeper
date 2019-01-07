@@ -11,27 +11,25 @@ function GameSearch({dispatch, id}){
   
   return (
     <div>
-    
-    
-    <div className='search-container'>
-      <form className='search-form' onSubmit={e => {
-        e.preventDefault();
-        if (!input.value.trim()) {
-          alert('Please Enter a Valid Search');
-          return
-        }
-        dispatch(fetchGameTitle(input.value.trim()));
-        input.value = '';
-      }}>
-      <h4>Enter Search Here:</h4>
-        <input className='search-input' placeholder="Game Title" ref={node => {
-          input = node;
+      <div className='search-container'>
+        <form className='search-form' onSubmit={e => {
+          e.preventDefault();
+          if (!input.value.trim()) {
+            alert('Please Enter a Valid Search');
+            return
+          }
+          dispatch(fetchGameTitle(input.value.trim()));
+          input.value = '';
         }}>
-        </input>
-        <button className='search-button'>Search</button>
-      </form>
-    </div>
-    <GameList />
+        <h4>Enter Search Here:</h4>
+          <input className='search-input' placeholder="Game Title" ref={node => {
+            input = node;
+          }}>
+          </input>
+          <button className='search-button'>Search</button>
+        </form>
+      </div>
+      <GameList />
     </div>
   );
 }

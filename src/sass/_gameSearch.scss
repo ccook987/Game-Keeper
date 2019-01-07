@@ -1,7 +1,5 @@
 .search-container {
-  // background-color: pink;
   height: 10vh;
-  // display: flex;
   align-items: center;
   justify-content: center;
 
@@ -9,22 +7,16 @@
       linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
       url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
   display: flex;
-  // margin-top: 10px;
-  // margin-left: 5px;
-  // margin-right: 5px;
-  // padding: 8px 2px;
-  // display: flex;
-  // justify-content: space-between;
   border-radius: 18px/40px;
   border-bottom: 4px solid #a9a9a9;
-    border-left: 2px solid #a9a9a9;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #fff;
-    box-shadow:
-       0 0 0 2px #171314,
-       0 0 0 5px #26714A,
-       -3px 3px 2px 5px #171314;
-       margin: 10px;
+  border-left: 2px solid #a9a9a9;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  box-shadow:
+     0 0 0 2px #171314,
+     0 0 0 5px #26714A,
+     -3px 3px 2px 5px #171314;
+  margin: 10px;
 }
 
 .search-form {
@@ -36,9 +28,6 @@
   height: 2em;
   text-align: center;
   border-radius: 18px/40px;
-  // margin-right: 10px;
-  // vertical-align: baseline;
-
 }
 
 .search-button {
@@ -48,12 +37,11 @@
       linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
       url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');  border-radius: 18px/40px;
   border-bottom: 4px solid #a9a9a9;
-    border-left: 2px solid #a9a9a9;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #fff;
-    box-shadow:
-       0 0 0 2px #171314,
-       0 0 0 5px #26714A,
-       -3px 3px 2px 5px #171314;
-       // vertical-align: baseline;
+  border-left: 2px solid #a9a9a9;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  box-shadow:
+     0 0 0 2px #171314,
+     0 0 0 5px #26714A,
+     -3px 3px 2px 5px #171314;
 }

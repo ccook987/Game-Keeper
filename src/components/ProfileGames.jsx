@@ -15,9 +15,9 @@ class ProfileGames extends React.Component {
       <div className='profilegames-wrapper'>
         <div className='profilegames-outer-container'>
           <div className='profilegames-inner-container'>
-          <div className='profilegames-username-container'>
-          <h4 className='username'>CCOOK987</h4>
-          </div>
+            <div className='profilegames-username-container'>
+              <h4 className='username'>CCOOK987</h4>
+            </div>
             <div className='profilegames-image-box'>
               <img className='profilegames-image' src={wizard} alt='user profile'/>
             </div>
@@ -30,18 +30,18 @@ class ProfileGames extends React.Component {
                 <option key={item.id}>{item.game}
                 </option>
                 )}
-                </select>
+              </select>
             </div>
             <div className='profilegames-currently-playing-container'>
-            <h4>Currently Playing: </h4>
-            <select>{this.props.games.game.map(item => 
-              <option key={item.id}>{item.game}
-              </option>
-              )}
+              <h4>Currently Playing: </h4>
+              <select>{this.props.games.game.map(item => 
+                <option key={item.id}>{item.game}
+                </option>
+                )}
               </select>
             </div>
             <div className='profilegames-list-container'>
-            <h4 className='collection'>Games in Collection: {this.props.games.game.length}</h4>
+              <h4 className='collection'>Games in Collection: {this.props.games.game.length}</h4>
               <ul className='profilegames-unordered-list' >
               {this.props.games.game.map(item => 
                 <li className='profilegames-list-item' key={item.value}>{item.game}<button className='remove-button'
@@ -53,7 +53,6 @@ class ProfileGames extends React.Component {
           </div>
         </div>
       </div>
-      
     )}
   }
   

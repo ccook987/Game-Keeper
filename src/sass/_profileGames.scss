@@ -1,6 +1,5 @@
 .profilegames-wrapper {
-  // display: flex;
-  // justify-content: center;
+
 }
 
 .profilegames-outer-container {
@@ -12,11 +11,9 @@
   border-radius: 25px;
   box-shadow: -8px 9px 16px -3px gray;
   background: #171314;
-  // margin-top: 10px;
 }
 
 .profilegames-inner-container {
-  // background-color: blue;
   height: 54.5em;
   width: 30em;
   border-top-left-radius: 6px;
@@ -26,28 +23,20 @@
   background-image: url('https://image.ibb.co/e1XKAS/green_background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  // background-color: #bbb;
   padding-top: 10px;
 }
 
 .profilegames-username-container {
-// background-color: red;
-// display: flex;
-// justify-content: center;
-width: 28em;
-margin: 0 auto;
-background:
-    linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
-    url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
-display: flex;
-// margin-top: 10px;
-// margin-left: 5px;
-// margin-right: 5px;
-padding: 5px 0;
-// display: flex;
-justify-content: space-between;
-border-radius: 18px/40px;
-border-bottom: 4px solid #a9a9a9;
+  width: 28em;
+  margin: 0 auto;
+  background:
+      linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
+      url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-between;
+  border-radius: 18px/40px;
+  border-bottom: 4px solid #a9a9a9;
   border-left: 2px solid #a9a9a9;
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
@@ -70,15 +59,15 @@ border-bottom: 4px solid #a9a9a9;
   background-size: cover;
   background-image: url('https://image.shutterstock.com/image-vector/summer-landscape-red-castle-green-260nw-142078945.jpg');
   border-bottom: 4px solid #a9a9a9;
-    border-left: 2px solid #a9a9a9;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #fff;
-    box-shadow:
-       0 0 0 2px #171314,
-       0 0 0 5px #26714A,
-       -3px 3px 2px 5px #171314;
-       margin-top: 9px;
-     }
+  border-left: 2px solid #a9a9a9;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  box-shadow:
+     0 0 0 2px #171314,
+     0 0 0 5px #26714A,
+     -3px 3px 2px 5px #171314;
+     margin-top: 9px;
+}
 
 .profilegames-image {
   height: 20em;
@@ -86,24 +75,16 @@ border-bottom: 4px solid #a9a9a9;
 }
 
 .profilegames-bio-container {
-// background-color: pink;
-// width: 28em;
-// margin: 0 auto;
-
-width: 28em;
-margin: 0 auto;
-background:
-    linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
-    url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
-display: flex;
-// margin-top: 10px;
-// margin-left: 5px;
-// margin-right: 5px;
-padding: 8px 2px;
-// display: flex;
-justify-content: space-between;
-border-radius: 18px/40px;
-border-bottom: 4px solid #a9a9a9;
+  width: 28em;
+  margin: 0 auto;
+  background:
+      linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
+      url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
+  display: flex;
+  padding: 8px 2px;
+  justify-content: space-between;
+  border-radius: 18px/40px;
+  border-bottom: 4px solid #a9a9a9;
   border-left: 2px solid #a9a9a9;
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
@@ -111,28 +92,21 @@ border-bottom: 4px solid #a9a9a9;
      0 0 0 2px #171314,
      0 0 0 5px #26714A,
      -3px 3px 2px 5px #171314;
-     margin-bottom: 7px;
-     font-style: italic;
+  margin-bottom: 7px;
+  font-style: italic;
 }
 
 .profilegames-favorite-container {
-// background-color: red;
-// display: flex;
-// justify-content: center;
-width: 28em;
-margin: 0 auto;
-background:
-    linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
-    url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
-display: flex;
-// margin-top: 10px;
-// margin-left: 5px;
-// margin-right: 5px;
-padding: 8px 2px;
-// display: flex;
-justify-content: space-between;
-border-radius: 18px/40px;
-border-bottom: 4px solid #a9a9a9;
+  width: 28em;
+  margin: 0 auto;
+  background:
+      linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
+      url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
+  display: flex;
+  padding: 8px 2px;
+  justify-content: space-between;
+  border-radius: 18px/40px;
+  border-bottom: 4px solid #a9a9a9;
   border-left: 2px solid #a9a9a9;
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
@@ -140,30 +114,21 @@ border-bottom: 4px solid #a9a9a9;
      0 0 0 2px #171314,
      0 0 0 5px #26714A,
      -3px 3px 2px 5px #171314;
-     margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .profilegames-currently-playing-container {
-// background-color: orange;
-display: flex;
-// justify-content: center;
-// width: 28em;
-// margin: 0 auto;
-
-width: 28em;
-margin: 0 auto;
-background:
-    linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
-    url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
-display: flex;
-// margin-top: 10px;
-// margin-left: 5px;
-// margin-right: 5px;
-padding: 8px 2px;
-// display: flex;
-justify-content: space-between;
-border-radius: 18px/40px;
-border-bottom: 4px solid #a9a9a9;
+  display: flex;
+  width: 28em;
+  margin: 0 auto;
+  background:
+      linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
+      url('https://image.ibb.co/jKByZn/tile_bg_1.jpg');
+  display: flex;
+  padding: 8px 2px;
+  justify-content: space-between;
+  border-radius: 18px/40px;
+  border-bottom: 4px solid #a9a9a9;
   border-left: 2px solid #a9a9a9;
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
@@ -171,7 +136,7 @@ border-bottom: 4px solid #a9a9a9;
      0 0 0 2px #171314,
      0 0 0 5px #26714A,
      -3px 3px 2px 5px #171314;
-     margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .collection {
@@ -186,27 +151,16 @@ border-bottom: 4px solid #a9a9a9;
      0 0 0 2px #171314,
      0 0 0 5px #26714A,
      -3px 3px 2px 5px #171314;
-     margin-bottom: 7px;
-     margin-top: 7px;
+  margin-bottom: 7px;
+  margin-top: 7px;
 }
 
 .profilegames-list-container {
-  // background-color: grey;
   height: 19em;
-  // width: 100%;
-  // display: flex;
   width: 28em;
   margin: 0 auto;
-  // flex-direction: column;
-  // justify-content: center;
-  // margin: 0 10px;
   background: #d3ded6;
   background-image: url(https://image.ibb.co/dFcNx7/tile_bg_2.jpg);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-around;
-  // padding: 50px 6px;
-  // font-size: 1.2em;
   border-radius: 18px/40px;
   border-bottom: 4px solid #a9a9a9;
   border-left: 2px solid #a9a9a9;
@@ -221,13 +175,9 @@ border-bottom: 4px solid #a9a9a9;
 }
 
 .profilegames-unordered-list {
-  // text-align: justify;
-  // padding-left: 1em;
-  // background-color: lightgray;
   height: 100%;
   width: 100%;
   text-align: left;
-
 }
 
 .profilegames-list-item {
@@ -245,31 +195,4 @@ border-bottom: 4px solid #a9a9a9;
   background-color: black;
   color: white;
   border-radius: 50%;
-  // text-align: left;
-  // vertical-align: baseline;
-  // border-radius: 25% 10%;
 }
-
-// .frame-text-box {
-//     margin: 0 10px;
-//     background: #d3ded6;
-//     background-image: url(https://image.ibb.co/dFcNx7/tile_bg_2.jpg);
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-around;
-//     padding: 50px 6px;
-//     font-size: 1.2em;
-// }
-// .frame-type-line {
-//     background:
-//         linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
-//         url(https://image.ibb.co/jKByZn/tile_bg_1.jpg);
-//     display: flex;
-//     margin-top: 10px;
-//     margin-left: 5px;
-//     margin-right: 5px;
-//     padding: 8px 0;
-//     display: flex;
-//     justify-content: space-between;
-//     border-radius: 18px/40px;
-// }

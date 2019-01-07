@@ -9,9 +9,7 @@ import Error404 from './Error404';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-
 class App extends React.Component {
-
   render() {
     return (
       <div className="App">

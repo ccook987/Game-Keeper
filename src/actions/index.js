@@ -1,6 +1,5 @@
 import * as types from '../constants/actionTypes';
 /* eslint-disable */
-// import firebase from 'firebase/app';
 import constants from './../../src/constants';
 const { firebaseConfig } = constants;
 require('firebase/database');
@@ -8,8 +7,6 @@ const firebase = require('firebase/app');
 import database from 'firebase'
 
 /* eslint-enable */
-
-//the new tutorial code starts here//
 
 export const addGame = (game) => ({type: types.ADD_GAME, game})
 export const removeGame = (game) => ({type: types.REMOVE_GAME, game})
@@ -25,9 +22,6 @@ export function watchGameRemovedEvent(dispatch) {
   dispatch(removeGame(snap.val()));
  });
 }
-
-//the new tutorial code ends here//
-
 
  export function getGamesThunk() {
  return dispatch => {
@@ -66,11 +60,6 @@ export const retrieveGames = (games) => ({
   type: types.RETRIEVE_GAMES,
   games
 });
-
-// export const selectFavorite = gameTitle => ({
-//   type: types.SELECT_FAVORITE,
-//   gameTitle: gameTitle
-// });
 
 export function fetchGameTitle(title) {
   return dispatch => {
